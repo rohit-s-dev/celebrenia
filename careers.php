@@ -35,110 +35,36 @@ include "inc/header.inc.php"; ?>
 
     <div class="container">
         <div class="row">
+
+            <?php 
+                $sql = "SELECT * FROM job_post";
+                $query = mysqli_query($con, $sql);
+
+                while($rows = mysqli_fetch_assoc($query)) {
+                    $job_title = $rows['job_title'];
+                    $job_detail = substr($rows['job_detail'], 0, 100);
+                    $job_exp = $rows['job_exp'];
+                    $job_salary = $rows['job_salary'];
+                    $job_date = $rows['job_date'];
+               
+            ?>
+                    
             <div class="col-lg-6 col-md-6 col-sm-6 mbb10">
                 <div class="j-o-t_vacancy_box">
-                    <h5 class="j-o-t_vacancy-title">Some Job</h5>
-                    <p class="j_o_t_vacancy_det">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam laudantium ipsa animi ullam? Odioex.......</p>
+                    <h5 class="j-o-t_vacancy-title"><?php echo $job_title;?></h5>
+                    <p class="j_o_t_vacancy_det"><?php echo $job_detail;?>.......</p>
                     <div class="j-o-t_vacancy_det">
                         <span class="f_t">Full Time</span>
-                        <span class="exp">Exp</span>
-                        <span class="date">Date</span>
+                        <span class="exp"><?php echo $job_exp; ?></span>
+                        <span class="date"><?php echo $job_date; ?></span>
                     </div>
 
                     <a href="" class="j-o-t_vacancy_read_more_btn"><span>&rarr;</span>Read More</a>
                 </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 mbb10">
-                <div class="j-o-t_vacancy_box">
-                    <h5 class="j-o-t_vacancy-title">Some Job</h5>
-                    <p class="j_o_t_vacancy_det">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam laudantium ipsa animi ullam? Odioex.......</p>
-                    <div class="j-o-t_vacancy_det">
-                        <span class="f_t">Full Time</span>
-                        <span class="exp">Exp</span>
-                        <span class="date">Date</span>
-                    </div>
-
-                    <a href="" class="j-o-t_vacancy_read_more_btn"><span>&rarr;</span>Read More</a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 mbb10">
-                <div class="j-o-t_vacancy_box">
-                    <h5 class="j-o-t_vacancy-title">Some Job</h5>
-                    <p class="j_o_t_vacancy_det">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam laudantium ipsa animi ullam? Odioex.......</p>
-                    <div class="j-o-t_vacancy_det">
-                        <span class="f_t">Full Time</span>
-                        <span class="exp">Exp</span>
-                        <span class="date">Date</span>
-                    </div>
-
-                    <a href="" class="j-o-t_vacancy_read_more_btn"><span>&rarr;</span>Read More</a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 mbb10">
-                <div class="j-o-t_vacancy_box">
-                    <h5 class="j-o-t_vacancy-title">Some Job</h5>
-                    <p class="j_o_t_vacancy_det">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam laudantium ipsa animi ullam? Odioex.......</p>
-                    <div class="j-o-t_vacancy_det">
-                        <span class="f_t">Full Time</span>
-                        <span class="exp">Exp</span>
-                        <span class="date">Date</span>
-                    </div>
-
-                    <a href="" class="j-o-t_vacancy_read_more_btn"><span>&rarr;</span>Read More</a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 mbb10">
-                <div class="j-o-t_vacancy_box">
-                    <h5 class="j-o-t_vacancy-title">Some Job</h5>
-                    <p class="j_o_t_vacancy_det">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam laudantium ipsa animi ullam? Odioex.......</p>
-                    <div class="j-o-t_vacancy_det">
-                        <span class="f_t">Full Time</span>
-                        <span class="exp">Exp</span>
-                        <span class="date">Date</span>
-                    </div>
-
-                    <a href="" class="j-o-t_vacancy_read_more_btn"><span>&rarr;</span>Read More</a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 mbb10">
-                <div class="j-o-t_vacancy_box">
-                    <h5 class="j-o-t_vacancy-title">Some Job</h5>
-                    <p class="j_o_t_vacancy_det">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam laudantium ipsa animi ullam? Odioex.......</p>
-                    <div class="j-o-t_vacancy_det">
-                        <span class="f_t">Full Time</span>
-                        <span class="exp">Exp</span>
-                        <span class="date">Date</span>
-                    </div>
-
-                    <a href="" class="j-o-t_vacancy_read_more_btn"><span>&rarr;</span>Read More</a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 mbb10">
-                <div class="j-o-t_vacancy_box">
-                    <h5 class="j-o-t_vacancy-title">Some Job</h5>
-                    <p class="j_o_t_vacancy_det">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam laudantium ipsa animi ullam? Odioex.......</p>
-                    <div class="j-o-t_vacancy_det">
-                        <span class="f_t">Full Time</span>
-                        <span class="exp">Exp</span>
-                        <span class="date">Date</span>
-                    </div>
-
-                    <a href="" class="j-o-t_vacancy_read_more_btn"><span>&rarr;</span>Read More</a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 mbb10">
-                <div class="j-o-t_vacancy_box">
-                    <h5 class="j-o-t_vacancy-title">Some Job</h5>
-                    <p class="j_o_t_vacancy_det">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam laudantium ipsa animi ullam? Odioex.......</p>
-                    <div class="j-o-t_vacancy_det">
-                        <span class="f_t">Full Time</span>
-                        <span class="exp">Exp</span>
-                        <span class="date">Date</span>
-                    </div>
-
-                    <a href="" class="j-o-t_vacancy_read_more_btn"><span>&rarr;</span>Read More</a>
-                </div>
-            </div>
+            </div>     
+            <?php
+            }
+            ?>
         </div>
     </div>
 </section>

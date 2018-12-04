@@ -1,5 +1,5 @@
 <?php $title = "Celebrania:: Contact Us"; 
-include "inc/header.inc.php"; ?>
+include "inc/header.inc.php"; ?>;
 <?php include "inc/m-nav.inc.php"; ?>
 
 <section class="contact_celebrania">
@@ -7,7 +7,7 @@ include "inc/header.inc.php"; ?>
     <div class="container">
         <div class="row">
             <div class="col-lg-7">
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="process.php" method="post" enctype="multipart/form-data" class="contact-form">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" name="name" id="name" class="form-control c_c_input" placeholder="john Doe">
@@ -20,7 +20,10 @@ include "inc/header.inc.php"; ?>
                         <label for="message">Message</label>
                         <textarea name="message" id="message" cols="30" rows="5"  class="form-control c_c_input" placeholder="....."></textarea>
                     </div>
-                    <button type="submit" name="submit" class="contact_btn">Submit</button>
+                    <div class="form-group" style="display: none;">
+                        <input type="hidden" name="url" class="form-control" placeholder="url">
+                    </div>
+                    <input type="submit"  class="contact_btn" value="submit">
                 </form>
             </div>
 
@@ -45,7 +48,7 @@ include "inc/header.inc.php"; ?>
         </div>
     </div>
 </section>
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14389.484922552714!2d85.1239224!3d25.6258019!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xea04098e256c650f!2sCelebrania!5e0!3m2!1sen!2sin!4v1543688907453" width="100" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28778.96982101201!2d85.123922!3d25.625802!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xea04098e256c650f!2sCelebrania!5e0!3m2!1sen!2sin!4v1543841434350" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 <div class="social_box_f">
     <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
